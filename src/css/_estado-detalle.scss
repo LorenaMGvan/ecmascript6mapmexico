@@ -1,0 +1,117 @@
+body {
+  color: $body-color;
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+  line-height: 18px;
+  background: $body-bg;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #6be585, #dd3e54);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #6be585, #dd3e54); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */    
+
+   * {
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+  }
+}
+
+h1{ font-size: 28px; line-height: 36px; margin-bottom: 15px; }
+h2{ font-size: 23px; line-height: 25px; margin-bottom: 15px;  }
+h3{ font-size: 19px; line-height: 27px; margin-bottom: 15px;  }
+h4{ font-size: 16px; line-height: 24px; margin-bottom: 15px;  }
+h5{ font-size: 14px; line-height: 22px; margin-bottom: 15px;  }
+h6{ font-size: 12px; line-height: 20px; margin-bottom: 15px;  }
+
+
+.container {
+  background: $content-bg;
+}
+
+.main-estado {
+  position: relative;
+  height: 100vh;
+  /* min-height: 100vh; */
+  padding-bottom: 40px;
+  overflow: hidden;
+  
+  &::after {
+    background: #fefae6 url('img/escudo.png') no-repeat center; 
+    content: ".";
+    display: block;
+    height: 100%;  
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;  
+  }
+  
+}
+
+.onmapa {
+  .main-estado {
+    height: auto;
+
+    &::after {
+      -moz-transition: height 1s ease;
+      -webkit-transition: height 1s ease;
+      -o-transition: height 1s ease;
+      transition: height 1s ease;
+      height: 0;      
+    }
+  }  
+
+}
+
+.wrap-map h5 {  
+  margin: 25px auto;
+}
+
+.estado-detalle__escudo {
+  text-align: center;
+
+  h2 {
+    color: #23b22e;
+    font-weight: 600;
+    text-transform: capitalize;
+  }
+
+}
+
+.mapalore__opciones {  
+  display: flex;
+  text-align: justify;
+  justify-content: center;
+  margin-bottom: 40px;
+
+  li {
+    margin: 5px 10px;
+  }
+
+  .active a {  
+    background: #3eb847;
+  }
+
+  a {
+    color: #fff;
+    background: #f44747;
+    padding: 5px 10px;
+    text-decoration: none;
+    font-weight: 600;
+    margin: 5px 10px;
+  }
+}
+
+.estado-detalle-info {
+
+  &:not(.active) {
+    display: none;
+  }
+
+  h2 {
+    color: #2182db; 
+    font-weight: 600;
+  }
+
+  p {
+    margin-bottom: 15px;
+  }
+} 

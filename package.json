@@ -1,0 +1,41 @@
+{
+  "name": "mapa-mexico",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack serve --config ./webpack.config.js --mode development",
+    "build": "babel index.js -o bundle.js",
+    "buildw": "npm babel index.js --watch --out-file script-compiled.js",
+    "builddir": "npx babel src --out-dir lib",
+    "test": "echo \"Error: no test specified\" && exit 0",
+    "build:production": "cross-env NODE_ENV=production webpack",
+    "watch": "webpack --watch",
+    "buildwebpack": "rm -rf dist && webpack"
+  },
+  "keywords": [],
+  "author": "lorenaMagvan",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.16.0",
+    "@babel/core": "^7.16.0",
+    "@babel/plugin-transform-runtime": "^7.16.4",
+    "@babel/preset-env": "^7.16.4",
+    "babel-loader": "^8.2.3",
+    "copy-webpack-plugin": "^10.0.0",
+    "css-loader": "^6.5.1",
+    "file-loader": "^6.2.0",
+    "html-webpack-plugin": "^5.5.0",
+    "image-webpack-loader": "^8.0.1",
+    "mini-css-extract-plugin": "^2.4.5",
+    "sass": "^1.43.4",
+    "sass-loader": "^12.3.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.64.1",
+    "webpack-cli": "^4.1.0",
+    "webpack-dev-server": "^3.11.0"
+  },
+  "dependencies": {
+    "imagemin-webpack-plugin": "^2.4.2"
+  }
+}
